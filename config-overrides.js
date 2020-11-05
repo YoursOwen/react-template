@@ -2,7 +2,8 @@ const {
   override,
   addWebpackPlugin,
   addWebpackAlias,
-  useEslintRc
+  useEslintRc,
+  fixBabelImports
 } = require('customize-cra')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const chalk = require('chalk')
@@ -27,17 +28,13 @@ module.exports = override(
       clear: true
     })
   ),
-  // addWebpackModuleRule({
-  //   test: /\.(md)$/,
-  //   loader: 'eslint-loader',
-  //   enforce: 'pre',
-  //   include: [path.join(__dirname, 'src')],
-  //   options: {
-  //     fix: true
-  //   }
-  // }),
   addWebpackAlias({
     '@src': resolve('./src')
   }),
-  useEslintRc('./.eslintrc.js')
+  useEslintRc('./.eslintrc.js'),
+  fixBabelImports('import', {
+    libraryName: 'antd',
+    libraryDirectory: 'es',
+    style: true
+  })
 )
