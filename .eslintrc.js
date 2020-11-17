@@ -14,13 +14,14 @@ module.exports = {
   // ESLint 默认使用Espree作为其解析器，你可以在配置文件中指定一个不同的解析器
   // "parser": "@typescript-eslint/parser",
   // 配置解析器支持的语法
+  parser: 'babel-eslint',
   parserOptions: {
-    parser: 'babel-eslint',
     ecmaFeatures: {
       jsx: true
     },
     ecmaVersion: 2018,
-    sourceType: 'module'
+    sourceType: 'module',
+    allowImportExportEverywhere: true
   },
   // ESLint 支持使用第三方插件。在使用插件之前，你必须使用 npm 安装它。
   // 在配置文件里配置插件时，可以使用 plugins 关键字来存放插件名字的列表。插件名称可以省略 eslint-plugin- 前缀。
@@ -45,6 +46,10 @@ module.exports = {
       }
     ],
     'no-useless-escape': 2,
-    'no-console': 0
+    'no-console': 0,
+    'import/no-named-as-default': 1,
+    'import/no-named-as-default-member': 1,
+    'import/extensions': [2, 'never', { 'web.js': 'never', json: 'never' }],
+    'import/no-extraneous-dependencies': [2, { devDependencies: true }]
   }
 }

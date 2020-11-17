@@ -3,7 +3,8 @@ const {
   addWebpackPlugin,
   addWebpackAlias,
   useEslintRc,
-  fixBabelImports
+  fixBabelImports,
+  useBabelRc
 } = require('customize-cra')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const chalk = require('chalk')
@@ -51,6 +52,7 @@ const useEslintConfig = (configRules) => (config) => {
 }
 
 module.exports = override(
+  useBabelRc(),
   useEslintConfig(eslintConfig),
   addWebpackPlugin(
     new ProgressBarPlugin({
