@@ -46,7 +46,7 @@
       "eslint --fix"
     ],
     "*.{css,scss}": [
-      "stylelint"
+      "stylelint --fix"
     ]
   },
   "browserslist": {
