@@ -42,13 +42,12 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
+    "*.{js,jsx,html}": [
       "prettier --write",
       "eslint --fix"
     ],
-    "*.{css,scss}": [
-      "npm run slint"
-    ]
+    "*.css": "stylelint --fix",
+    "*.scss": "stylelint --syntax=scss --fix"
   },
   "browserslist": {
     "production": [
