@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import ReactDOM from 'react-dom'
 // import { Provider } from 'react-redux'
 import './index.css'

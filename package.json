@@ -45,7 +45,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "npm run lint"
+      "eslint --fix"
     ]
   },
   "browserslist": {
