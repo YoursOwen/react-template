@@ -12,9 +12,8 @@ module.exports = {
     $: true
   },
   // ESLint 默认使用Espree作为其解析器，你可以在配置文件中指定一个不同的解析器
-  // "parser": "@typescript-eslint/parser",
-  // 配置解析器支持的语法
   parser: 'babel-eslint',
+  // 配置解析器支持的语法
   parserOptions: {
     ecmaFeatures: {
       jsx: true
