@@ -30,7 +30,8 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
-    "lint": "eslint src/**/*.{js,jsx} --fix"
+    "lint": "eslint src/**/*.{js,jsx} --fix",
+    "slint": "stylelint src/**/*.{css,scss} --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -46,7 +47,7 @@
       "eslint --fix"
     ],
     "*.{css,scss}": [
-      "stylelint --fix"
+      "npm run slint"
     ]
   },
   "browserslist": {

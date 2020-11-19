@@ -1,4 +1,4 @@
-import React, { Suspense, useCallback } from 'react'
+import React, { Suspense } from 'react'
 import { HashRouter as Router } from 'react-router-dom'
 import Routes from './router'
 
