@@ -1,3 +1,18 @@
 {
-  "extends": "stylelint-config-sass-guidelines"
+  "extends": ["stylelint-config-standard", "stylelint-config-sass-guidelines", "stylelint-config-prettier"],
+  "rules": {
+    "declaration-colon-space-after": "always-single-line",
+    "declaration-colon-space-before": "never",
+    "declaration-block-trailing-semicolon": "always",
+    "rule-empty-line-before": [
+      "always"
+    ],
+    "selector-type-no-unknown": [true, {
+      "ignoreTypes": ["page"]
+    }],
+    "unit-no-unknown": [true, {
+      "ignoreUnits": ["rpx"]
+    }],
+    "no-descending-specificity": null
+  }
 }
