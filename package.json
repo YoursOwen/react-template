@@ -32,7 +32,8 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**/*.{js,jsx} --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,8 +45,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "eslint --fix",
-      "git add"
+      "npm run lint"
     ]
   },
   "browserslist": {
